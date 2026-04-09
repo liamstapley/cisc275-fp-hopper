@@ -1,11 +1,13 @@
 import { render, screen } from "@testing-library/react";
-
+import { MemoryRouter } from "react-router-dom";
 import { App } from "../src/App";
 
-test("App component display header", () => {
-    render(<App />);
-
-    const heading = screen.getByText(/Final project template/i);
-
-    expect(heading).toBeInTheDocument();
+test("App component displays dashboard heading", () => {
+  render(
+    <MemoryRouter>
+      <App />
+    </MemoryRouter>
+  );
+  const heading = screen.getByText(/Drafter Drafter/i);
+  expect(heading).toBeInTheDocument();
 });

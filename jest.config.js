@@ -1,5 +1,6 @@
 export default {
     testEnvironment: "jsdom",
+    setupFiles: ["<rootDir>/jest.polyfills.cjs"],
     setupFilesAfterEnv: ["<rootDir>/tests/setupTests.ts"],
     testMatch: ["<rootDir>/tests/**/*.(spec).(ts|tsx)"],
     testPathIgnorePatterns: ["<rootDir>/tests/e2e/"],
