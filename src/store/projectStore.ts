@@ -28,7 +28,7 @@ function updateProjectInList(projects: Project[], projectId: string, updater: (p
 }
 
 export const useProjectStore = create<ProjectStore>((set, get) => ({
-  projects: [],
+  projects: loadProjects(),
   currentProjectId: null,
 
   setCurrentProject: (id) => set({ currentProjectId: id }),
